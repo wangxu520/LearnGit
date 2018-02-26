@@ -7,6 +7,7 @@
 MyModel::MyModel(QObject *parent):
     QAbstractTableModel(parent)
 {
+    qDebug()<<"what is your name?";
     time = new QTimer(this);
     time->setInterval(1000);
     connect(time,SIGNAL(timeout()),this,SLOT(ChangedTime()));
